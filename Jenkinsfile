@@ -15,7 +15,7 @@ pipeline {
                  withCredentials([gitUsernamePassword(credentialsId: 'git-basic', gitToolName: 'git-tool')]) {
                               sh '''
                                 git branch -a
-                                git fetch https://github.com/chaossnowflake/sonar-test.git +refs/heads/main:refs/remotes/origin/main
+                                git fetch $GIT_URL +refs/heads/$CHANGE_TARGET:refs/remotes/origin/$CHANGE_TARGET
                                 git branch -a
                                '''
                             }
