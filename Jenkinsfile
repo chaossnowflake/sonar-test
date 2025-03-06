@@ -10,6 +10,9 @@ pipeline {
             }
         }
         stage('Test') {
+            withCredentials([gitUsernamePassword(credentialsId: 'git-basic', gitToolName: 'git-tool')]) {
+              sh 'git fetch --all'
+            }
             steps {
                 sh '''
                     printenv
