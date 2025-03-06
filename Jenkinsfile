@@ -13,7 +13,7 @@ pipeline {
 
             steps {
                  withCredentials([gitUsernamePassword(credentialsId: 'git-basic', gitToolName: 'git-tool')]) {
-                              sh 'git fetch --all'
+                              sh 'git log'
                             }
                 sh '''
                     printenv
