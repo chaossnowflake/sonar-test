@@ -1,8 +1,10 @@
 package org.sonar;
 
+/**
+ * a comment
+ */
 public class Application {
   public static void main(String[] args) {
-    System.out.println("My Application");
-    System.out.println("look ma, no logger!");
+    System.out.println("hey");
   }
 }
