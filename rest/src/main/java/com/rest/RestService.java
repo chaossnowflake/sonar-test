@@ -5,7 +5,5 @@ public class RestService {
     return "https://" + url;
   }
 
-  public void andNothing() {
-
-  }
+  public void andNothing() {}
 }
