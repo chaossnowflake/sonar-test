@@ -15,8 +15,7 @@ pipeline {
                  withCredentials([gitUsernamePassword(credentialsId: 'git-basic', gitToolName: 'git-tool')]) {
                               sh '''
                                 git branch -a
-                                echo 'command: git fetch $GIT_URL +refs/heads/$CHANGE_TARGET:refs/remotes/origin/$CHANGE_TARGET'
-                                git fetch $GIT_URL +refs/heads/$CHANGE_TARGET:refs/remotes/origin/$CHANGE_TARGET
+                                git fetch $GIT_URL +refs/heads/main:refs/remotes/origin/main
                                 git branch -a
                                '''
                             }
