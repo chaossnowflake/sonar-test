@@ -1,21 +1,26 @@
 plugins {
     id 'java'
-    id "org.sonarqube" version "6.0.1.5171"
+    id "org.sonarqube" version "6.0.1.5171" apply false
 }
 
 group = 'org.sockets'
 version = '1.0-SNAPSHOT'
-
-sonar {
-    properties {
-        property "sonar.projectKey", "chaossnowflake_sonar-test"
-        property "sonar.organization", "chaossnowflake"
-        property "sonar.host.url", "https://sonarcloud.io"
+allprojects {
+    repositories {
+        mavenCentral()
     }
 }
 
-repositories {
-    mavenCentral()
+
+subprojects {
+    apply plugin: 'org.sonarqube'
+    sonar {
+        properties {
+            property "sonar.projectKey", "chaossnowflake_sonar-test"
+            property "sonar.organization", "chaossnowflake"
+            property "sonar.host.url", "https://sonarcloud.io"
+        }
+    }
 }
 
 dependencies {
