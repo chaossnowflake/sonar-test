@@ -8,6 +8,7 @@ class ModuleService2Test {
 
   @Test
   void doNothing() {
-    assertEquals(1, 1);
+    ModuleService2 m = new ModuleService2();
+    m.doNothing();
   }
 }
