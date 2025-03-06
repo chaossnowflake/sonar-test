@@ -15,7 +15,7 @@ pipeline {
                  withCredentials([gitUsernamePassword(credentialsId: 'git-basic', gitToolName: 'git-tool')]) {
                               sh '''
                                 git branch -a
-                                get fetch
+                                git fetch
                                 git branch -a
                                '''
                             }
