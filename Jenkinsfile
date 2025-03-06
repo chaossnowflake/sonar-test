@@ -13,7 +13,7 @@ pipeline {
             steps {
                 sh '''
                     printenv
-                    ./gradlew sonar -Dsonar.host.url=https://sonarcloud.io  -Dsonar.projectKey=chaossnowflake_sonar-test -Dsonar.pullrequest.key=${CHANGE_ID} -Dsonar.pullrequest.branch=${CHANGE_BRANCH} -Dsonar.pullrequest.base=${CHANGE_TARGET}
+                    ./gradlew sonar -Dsonar.pullrequest.key=8 -Dsonar.pullrequest.branch=feature/test-2 -Dsonar.pullrequest.base=main
                 '''
             }
         }
