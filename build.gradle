@@ -1,6 +1,7 @@
 plugins {
     id 'java'
     id "org.sonarqube" version "6.0.1.5171" apply true
+    id "jacoco"
 }
 
 group = 'org.sockets'
@@ -18,16 +19,21 @@ sonar {
         property "sonar.host.url", "https://sonarcloud.io"
     }
 }
-//subprojects {
-//    apply plugin: 'org.sonarqube'
-//
-//}
+
+subprojects {
+    apply plugin: 'jacoco'
+    test {
+        useJUnitPlatform()
+        finalizedBy jacocoTestReport
+    }
+
+    jacocoTestReport {
+        dependsOn test
+    }
+}
 
 dependencies {
     testImplementation platform('org.junit:junit-bom:5.10.0')
     testImplementation 'org.junit.jupiter:junit-jupiter'
 }
 
-test {
-    useJUnitPlatform()
-}
