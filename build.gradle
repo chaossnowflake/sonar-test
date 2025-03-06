@@ -30,6 +30,7 @@ sonar {
 subprojects {
     apply plugin: 'java'
     apply plugin: 'jacoco'
+    apply plugin: 'org.sonarqube'
 
     tasks.withType(Test) {
         useJUnitPlatform()
