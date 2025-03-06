@@ -1,2 +1,4 @@
 rootProject.name = 'sonar'
+include 'mod1'
+include 'mod2'
 
