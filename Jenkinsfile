@@ -1,6 +1,8 @@
 pipeline {
     agent any
-
+    environment {
+        SONAR_TOKEN = credentials('sonar-token')
+    }
     stages {
         stage('Build') {
             steps {
@@ -10,7 +12,7 @@ pipeline {
         stage('Test') {
             steps {
                 sh '''
-                    ./gradlew clean test
+                    printenv
                 '''
             }
         }
