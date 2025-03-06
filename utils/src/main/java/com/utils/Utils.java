@@ -9,6 +9,6 @@ public class Utils {
   }
 
   public static String lower(final String str) {
-    return str.toLowerCase();
+    return null;
   }
 }
