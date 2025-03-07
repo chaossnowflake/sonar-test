@@ -9,4 +9,14 @@ class UtilsTest {
   void upper() {
     assertEquals("HELLO", Utils.upper("hello"));
   }
+
+  @Test
+  void upper1() {
+    Utils.nothing2();
+  }
+
+  @Test
+  void upper2() {
+    Utils.nothing();
+  }
 }

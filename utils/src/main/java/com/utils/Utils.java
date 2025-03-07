@@ -8,9 +8,9 @@ public class Utils {
     return str.toUpperCase();
   }
 
-  public void nothing() {}
+  public static void nothing() {}
 
-  public void nothing2() {
+  public static void nothing2() {
     // no coverage
     int x = 12;
   }
