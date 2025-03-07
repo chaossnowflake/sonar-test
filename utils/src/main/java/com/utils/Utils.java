@@ -9,4 +9,9 @@ public class Utils {
   }
 
   public void nothing() {}
+
+  public void nothing2() {
+    // no coverage
+    int x = 12;
+  }
 }
