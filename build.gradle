@@ -23,6 +23,7 @@ sonar {
         property "sonar.projectKey", "chaossnowflake_sonar-test"
         property "sonar.organization", "chaossnowflake"
         property "sonar.host.url", "https://sonarcloud.io"
+        property "sonar.java.coveragePlugin", "jacoco"
     }
 }
 
